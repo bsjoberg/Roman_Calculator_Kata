@@ -35,21 +35,21 @@ public class RomanCalculator {
 
         for(int i = input.length() - 1; i >= 0; i--)
         {
-            int temp = romanToIntTable.get(input.charAt(i));
-            if (temp < prev)
-                result -= temp;
+            int current = romanToIntTable.get(input.charAt(i));
+            if (current < prev)
+                result -= current;
             else
-                result += temp;
-            prev = temp;
+                result += current;
+            prev = current;
         }
         return result;
     }
 
     public static String toRoman(int input) {
-        int l =  intToRomanMap.floorKey(input);
-        if ( input == l ) {
+        int floorKeyValue =  intToRomanMap.floorKey(input);
+        if ( input == floorKeyValue ) {
             return intToRomanMap.get(input);
         }
-        return intToRomanMap.get(l) + toRoman(input-l);
+        return intToRomanMap.get(floorKeyValue) + toRoman(input-floorKeyValue);
     }
 }
