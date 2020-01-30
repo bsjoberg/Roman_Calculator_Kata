@@ -16,8 +16,10 @@ public class RomanCalculator {
             result = 1;
         else if (input.equals("II"))
             result = 2;
-        else
+        else if (input.equals("III"))
             result = 3;
+        else
+            result = 4;
         return result;
     }
 
@@ -26,8 +28,12 @@ public class RomanCalculator {
 
         if (input == 2)
             result = "II";
-        else
+        else if (input == 3)
             result = "III";
+        else if (input == 8)
+            result = "VIII";
+        else
+            result = "IV";
         return result;
     }
 }
