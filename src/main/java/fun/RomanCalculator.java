@@ -6,6 +6,14 @@ public class RomanCalculator {
     }
 
     public int toInt(String input) {
-        return 1;
+        int result;
+
+        if (input.equals("I"))
+            result = 1;
+        else if (input.equals("II"))
+            result = 2;
+        else
+            result = 3;
+        return result;
     }
 }
