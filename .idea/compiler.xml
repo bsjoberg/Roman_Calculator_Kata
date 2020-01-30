@@ -9,5 +9,8 @@
         <module name="Roman_Calculator_Kata" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Roman_Calculator_Kata" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
