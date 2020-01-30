@@ -1,15 +1,24 @@
 package fun;
 
+import java.util.Hashtable;
 import java.util.TreeMap;
 
 public class RomanCalculator {
-    private final static TreeMap<Integer, String> map = new TreeMap<>();
+    private final static TreeMap<Integer, String> intToRomanMap = new TreeMap<>();
 
     static {
-        map.put(9, "IX");
-        map.put(5, "V");
-        map.put(4, "IV");
-        map.put(1, "I");
+        intToRomanMap.put(9, "IX");
+        intToRomanMap.put(5, "V");
+        intToRomanMap.put(4, "IV");
+        intToRomanMap.put(1, "I");
+    }
+
+    private final static Hashtable<Character, Integer> romanToIntTable = new Hashtable<>();
+
+    static {
+        romanToIntTable.put('I', 1);
+        romanToIntTable.put('V', 5);
+        romanToIntTable.put('X', 10);
     }
 
     public static String add(String firstString, String secondString) {
@@ -21,36 +30,26 @@ public class RomanCalculator {
     }
 
     public static int toInt(String input) {
-        int result;
+        int result = 0;
+        int prev = 0;
 
-        switch (input) {
-            case "I":
-                result = 1;
-                break;
-            case "II":
-                result = 2;
-                break;
-            case "III":
-                result = 3;
-                break;
-            case "IV":
-                result = 4;
-                break;
-            case "VI":
-                result = 6;
-                break;
-            default:
-                result = 9;
-                break;
+        for(int i = input.length() - 1; i >= 0; i--)
+        {
+            int temp = romanToIntTable.get(input.charAt(i));
+            if (temp < prev)
+                result -= temp;
+            else
+                result += temp;
+            prev = temp;
         }
         return result;
     }
 
     public static String toRoman(int input) {
-        int l =  map.floorKey(input);
+        int l =  intToRomanMap.floorKey(input);
         if ( input == l ) {
-            return map.get(input);
+            return intToRomanMap.get(input);
         }
-        return map.get(l) + toRoman(input-l);
+        return intToRomanMap.get(l) + toRoman(input-l);
     }
 }
