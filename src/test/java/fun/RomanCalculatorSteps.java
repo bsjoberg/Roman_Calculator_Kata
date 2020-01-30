@@ -21,7 +21,7 @@ public class RomanCalculatorSteps {
     }
 
     @Then("I expect {string}")
-    public void i_expect(String string) {
-        assertEquals("II", result);
+    public void i_expect(String expectedValue) {
+        assertEquals(expectedValue, result);
     }
 }
