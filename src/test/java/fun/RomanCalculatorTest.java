@@ -12,6 +12,7 @@ public class RomanCalculatorTest {
         assertEquals(2, RomanCalculator.toInt("II"));
         assertEquals(3, RomanCalculator.toInt("III"));
         assertEquals(6, RomanCalculator.toInt("VI"));
+        assertEquals(10, RomanCalculator.toInt("X"));
     }
 
     @Test
@@ -30,5 +31,6 @@ public class RomanCalculatorTest {
     @Test
     public void should_convert_int_using_subtractive_Roman() {
         assertEquals("IV", RomanCalculator.toRoman(4));
+        assertEquals("IX", RomanCalculator.toRoman(9));
     }
 }
