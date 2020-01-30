@@ -1,7 +1,7 @@
 package fun;
 
 public class RomanCalculator {
-    public String add(String firstString, String secondString) {
+    public static String add(String firstString, String secondString) {
         // Convert to int's
         int firstInt = toInt(firstString);
         int secondInt = toInt(secondString);
@@ -9,7 +9,7 @@ public class RomanCalculator {
         return toRoman(firstInt + secondInt);
     }
 
-    public int toInt(String input) {
+    public static int toInt(String input) {
         int result;
 
         if (input.equals("I"))
@@ -21,7 +21,7 @@ public class RomanCalculator {
         return result;
     }
 
-    public String toRoman(int input) {
+    public static String toRoman(int input) {
         String result;
 
         if (input == 2)

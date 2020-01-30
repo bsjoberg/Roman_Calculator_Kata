@@ -8,3 +8,10 @@ Feature: Add two roman numerals
     Given I have a roman calculator
     When I add "II" and "I"
     Then I expect "III"
+
+#  Scenario: Add two complicated Roman numerals
+#    Given I have a roman calculator
+#    When I add "IV" and "IV"
+#    Then I expect "VIII"
+
+  # Scenario: Gracefully handle when a non-Roman numeral is entered

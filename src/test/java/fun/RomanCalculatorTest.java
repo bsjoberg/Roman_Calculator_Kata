@@ -8,16 +8,19 @@ public class RomanCalculatorTest {
 
     @Test
     public void should_convert_Roman_to_int() {
-        RomanCalculator calculator = new RomanCalculator();
-        assertEquals(1, calculator.toInt("I"));
-        assertEquals(2, calculator.toInt("II"));
-        assertEquals(3, calculator.toInt("III"));
+        assertEquals(1, RomanCalculator.toInt("I"));
+        assertEquals(2, RomanCalculator.toInt("II"));
+        assertEquals(3, RomanCalculator.toInt("III"));
     }
 
     @Test
     public void should_convert_int_to_Roman() {
-        RomanCalculator calculator = new RomanCalculator();
-        assertEquals("II", calculator.toRoman(2));
-        assertEquals("III", calculator.toRoman(3));
+        assertEquals("II", RomanCalculator.toRoman(2));
+        assertEquals("III", RomanCalculator.toRoman(3));
+    }
+
+    @Test
+    public void should_convert_using_subtractive_Roman_to_int() {
+
     }
 }
