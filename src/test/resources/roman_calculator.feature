@@ -14,4 +14,9 @@ Feature: Add two roman numerals
     When I add "IV" and "IV"
     Then I expect "VIII"
 
+  Scenario: Add two Roman numerals with subtractive result
+    Given I have a roman calculator
+    When I add "III" and "VI"
+    Then I expect "IX"
+
   # Scenario: Gracefully handle when a non-Roman numeral is entered

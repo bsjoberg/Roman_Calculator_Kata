@@ -11,11 +11,13 @@ public class RomanCalculatorTest {
         assertEquals(1, RomanCalculator.toInt("I"));
         assertEquals(2, RomanCalculator.toInt("II"));
         assertEquals(3, RomanCalculator.toInt("III"));
+        assertEquals(6, RomanCalculator.toInt("VI"));
     }
 
     @Test
     public void should_convert_complicated_Roman_to_int() {
         assertEquals(4, RomanCalculator.toInt("IV"));
+        assertEquals(9, RomanCalculator.toInt("IX"));
     }
 
     @Test
