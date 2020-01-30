@@ -1,10 +1,11 @@
 package fun;
 
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.TreeMap;
 
 public class RomanCalculator {
-    private final static TreeMap<Integer, String> intToRomanMap = new TreeMap<>();
+    private static final TreeMap<Integer, String> intToRomanMap = new TreeMap<>();
 
     static {
         intToRomanMap.put(9, "IX");
@@ -13,7 +14,7 @@ public class RomanCalculator {
         intToRomanMap.put(1, "I");
     }
 
-    private final static Hashtable<Character, Integer> romanToIntTable = new Hashtable<>();
+    private static final HashMap<Character, Integer> romanToIntTable = new HashMap<>();
 
     static {
         romanToIntTable.put('I', 1);
