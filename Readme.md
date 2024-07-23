@@ -1,3 +1,4 @@
-# Roman Calculator Kata
-This is a kata that adds two Roman numeral strings and returns the sum as a Roman numeral string.
-It is developed in Java with version 11. I used Cucumber as well to show how BDD and TDD could be used to develop the solution.
+# Clean start for kata
+This has one junit test and one behavior test (Cucumber) set up and passing. It uses Java 17 with Junit 5 and Cucumber 3.
+
+Run `mvn test`
