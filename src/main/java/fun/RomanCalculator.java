@@ -23,10 +23,10 @@ public class RomanCalculator {
 
     public static String add(String firstString, String secondString) {
         // Convert to int's
-        int firstInt = toInt(firstString);
-        int secondInt = toInt(secondString);
+        int firstInt = fromRomanToInt(firstString);
+        int secondInt = fromRomanToInt(secondString);
 
-        return toRoman(firstInt + secondInt);
+        return fromIntToRoman(firstInt + secondInt);
     }
 
     public static int fromRomanToInt(String input) {
@@ -50,6 +50,6 @@ public class RomanCalculator {
         if ( input == floorKeyValue ) {
             return intToRomanMap.get(input);
         }
-        return intToRomanMap.get(floorKeyValue) + toRoman(input-floorKeyValue);
+        return intToRomanMap.get(floorKeyValue) + fromIntToRoman(input-floorKeyValue);
     }
 }
