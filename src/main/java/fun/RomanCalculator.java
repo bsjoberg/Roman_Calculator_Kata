@@ -29,7 +29,7 @@ public class RomanCalculator {
         return toRoman(firstInt + secondInt);
     }
 
-    public static int toInt(String input) {
+    public static int fromRomanToInt(String input) {
         int result = 0;
         int prev = 0;
 
@@ -45,7 +45,7 @@ public class RomanCalculator {
         return result;
     }
 
-    public static String toRoman(int input) {
+    public static String fromIntToRoman(int input) {
         int floorKeyValue =  intToRomanMap.floorKey(input);
         if ( input == floorKeyValue ) {
             return intToRomanMap.get(input);
